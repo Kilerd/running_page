@@ -156,6 +156,8 @@ def get_all_keep_tracks(email, password, old_tracks_ids, with_download_gpx=False
         print(f"parsing keep id {run}")
         try:
             run_data = get_single_run_data(s, headers, run)
+            print("single run data")
+            print(run_data)
             track = parse_raw_data_to_nametuple(
                 run_data, old_gpx_ids, with_download_gpx
             )
